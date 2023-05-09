@@ -20,7 +20,7 @@ class Feedback extends React.Component {
       bad: this.props.initialValueBad,
   }
 
-  //  Через switch , нажатие на good, bad, neutral +1
+  //  Через switch метод увеличивает при нажатии, нажатие на good, bad, neutral +1
   onLeaveFeedback = (event) => {
       switch (event.target.value) {
           case 'good':
@@ -44,13 +44,13 @@ class Feedback extends React.Component {
       }
   }
 
-  // метод подсчета total
+  // метод подсчета total,  общее количество отзывов 
   calculateTotal = () => {
     const { good, neutral, bad } = this.state;
     return good + neutral + bad;
   }
 
-  // метод подсчета позитивного процента
+  // метод подсчета позитивного процента отзыва
   calculatePositivePercentage = () => {
     const { good } = this.state;
     const total = this.calculateTotal();
