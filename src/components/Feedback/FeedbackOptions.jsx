@@ -1,14 +1,14 @@
-// FeedbackOptions.jsx
+
 
 import React from 'react';
 import PropTypes from 'prop-types';
 import { ButtonContainer, Buttons } from './FeedbackOptions.styled';
 
 
-
+// options массив с Feetback содержит 'good', 'neutral', 'bad' для кнопок 
 export const FeedbackOptions = ({options, onLeaveFeedback}) =>{
     return (
-
+// создаём кнопки
 <ButtonContainer>
 			{options.map(option => {
 				return (
