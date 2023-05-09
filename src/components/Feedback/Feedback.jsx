@@ -5,6 +5,7 @@ import {Statistics} from "../Statistics/Statistics";
 import Notification from '../Notification/Notification';
 import Section from "../Section/Section"
 import {FeedbackOptions} from "./FeedbackOptions"
+import options from '../Data/options.json';
 
 class Feedback extends React.Component {
   // state значение по умолчанию
@@ -67,7 +68,7 @@ class Feedback extends React.Component {
       <div>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={['good', 'neutral', 'bad']}
+            options={options}
             onLeaveFeedback={this.onLeaveFeedback}
           />
         </Section>
